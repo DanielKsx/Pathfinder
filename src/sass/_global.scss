@@ -1,0 +1,28 @@
+@import "variable";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-main;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.page {
+  min-height: 100vh;
+  background-color: $bg-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-footer {
+  text-align: center;
+  letter-spacing: 2px;
+  color: #bbbbbb;
+  padding: 48px 16px 32px;
+}

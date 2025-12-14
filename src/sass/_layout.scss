@@ -1,0 +1,249 @@
+@import "variable";
+
+/* hero */
+
+.hero {
+  position: relative;
+  min-height: 480px;
+  min-height: 100svh;
+  background: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      $overlay-hero-top,
+      $overlay-hero-mid,
+      $overlay-hero-bottom
+    );
+    z-index: 0;
+  }
+}
+
+/* nav */ 
+
+.main-nav {
+  position: static;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  z-index: 1;
+
+  a{
+    position: relative;
+    padding-bottom: 3px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: $text-color;
+      transition: width 0.2s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+/* hero text */ 
+
+.hero-inner {
+  margin-top: 120px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+
+  .hero-subtitle {
+    justify-self: end;
+    margin-top: -70px;
+    margin-right: 50px;
+    color: rgba(204, 202, 202, 0.85);
+  }
+}
+
+/* sections */
+.section-top {
+  position: relative;
+  margin-top: -40vh;
+  padding-left: $page-padding-x;
+  padding-right: $page-padding-x;
+}
+
+
+/* card */
+
+.card-top{
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  z-index: 3;
+}
+
+.card-media {
+  grid-area: 1 / 1;
+}
+
+.card-media img {
+  width: min(780px, 75vw);
+  margin-left: -15vw;
+  border-radius: 8px;
+  display: block;
+}
+
+.card-body--text {
+  grid-area: 1 / 1;
+  align-self: end;
+  justify-self: center;
+  max-width: 520px;
+  padding: 24px 28px;
+  margin: 0 0 7vh 0;
+  margin-left: -11vw;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.card-bottom {
+  position: relative;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: clamp(16px, 3vw, 40px);
+  margin-top: clamp(40px, 8vh, 120px);
+
+
+  .card-minimalize img {
+    width: min(1200px, 75vw);
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .card-body--over-image {
+    position: absolute;
+    left: clamp(-220px, -15vw, -140px);
+    top: clamp(-30px, -1vw, -5px);
+    max-width: 760px;
+    white-space: normal;
+    z-index: 2;
+  }
+
+  .card-title {
+  white-space: nowrap;
+}
+ 
+}
+
+@media (max-width: $bp-desktop) {
+
+  .main-nav {
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .section-top { 
+    margin-top: -20vh; 
+  }
+
+  .card-media img{
+    margin-left: 0;
+  }
+
+  .card-body--text{
+    margin: 0 24px 24px 24px;
+    justify-self: center;
+    text-align: center;
+    max-width: 600px;
+    white-space: normal;
+  }
+
+  .card-bottom .card-body--over-image{
+    left: auto;
+    right: auto;
+    top: 24px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: $bp-tablet) {
+  .hero-inner {
+    margin-top: 120px;
+    justify-items: center;
+
+  .hero-subtitle {
+    justify-self: center;
+    margin-top: 10px;
+    margin-right: 0;
+    color: rgba(204, 202, 202, 1);
+  }
+}
+
+  .section-top {
+    margin-top: -12vh;
+  }
+
+  .card-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-media {
+    grid-area: auto;
+  }
+
+  .card-media img{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .card-body--text{
+    grid-area: auto;
+    justify-self: auto;
+    align-self: auto;
+
+    position: static;
+    margin: 16px 0 0;
+    margin-left: 0;
+    padding: 0 16px;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .card-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  .card-bottom .card-body--over-image {
+    position: static;
+    left: auto;
+    top: auto;
+    margin: 16px 0 0;
+    padding: 0 16px;
+    max-width: 100%;
+    text-align: center;
+  }
+}

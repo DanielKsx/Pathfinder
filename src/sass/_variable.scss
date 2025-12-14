@@ -1,0 +1,46 @@
+$font-main: 'Source Sans 3', sans-serif;
+
+$font-regular: 400;
+$font-semibold: 600;
+$font-bold: 700;
+$font-black: 900;
+
+// text size
+$fs-nav: 30px;
+$fs-standard: 40px;
+$fs-base: 60px;
+$fs-title: 100px;
+$fs-title-2: 36px;
+
+// text color
+$text-color: #FFF;
+$color-accent: #E74C3C;
+
+// background global
+$bg-color: #131313;
+
+// card backgroud
+$bg-card: #111;
+
+// pathfinder colors
+$grid-selected: #C24E00;
+$grid-path: #2ECC71;
+
+
+// overlay
+$overlay-hero-top: rgba(0, 0, 0, 0.04);
+$overlay-hero-mid: rgba(0, 0, 0, 0.20);
+$overlay-hero-bottom: rgba(0, 0, 0, 0.6);
+
+
+// layout
+$max-width: 960px;
+$page-padding-x: 24px;
+
+$shadow-card: 0 22px 40px rgba(0, 0, 0, 0.6);
+
+
+// breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
