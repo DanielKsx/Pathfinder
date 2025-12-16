@@ -1,14 +1,25 @@
 /* global AOS */
 
+let isAOSReady = false;
+
 export function initAOS() {
+  if (isAOSReady) return;
+
   AOS.init({
     duration: 700,
     easing: 'ease-out',
-    once: true,
-    offset: 150
+    once: false,
+    offset: 150,
   });
 
-  window.addEventListener('load', () => {
-    AOS.refresh();
+  isAOSReady = true;
+}
+
+export function refreshAOS() {
+  if (!isAOSReady) return;
+
+ 
+  requestAnimationFrame(() => {
+    AOS.refreshHard();
   });
 }

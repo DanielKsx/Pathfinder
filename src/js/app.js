@@ -1,5 +1,6 @@
 import { settings, select, classNames } from './settings.js';
-import { initAOS } from './components/aos.js';
+import Finder from './components/Finder.js';
+import { initAOS, refreshAOS } from './components/aos.js';
 
 const app = {
   initPages: function() {
@@ -57,13 +58,16 @@ const app = {
           link.getAttribute('href') === '#' + finalPageId
         );
       }
+
+      refreshAOS();
     },
 
   init: function(){
     const thisApp = this;
 
-    thisApp.initPages();
     initAOS();
+    thisApp.initPages();
+    thisApp.finder = new Finder();
     }
 };
 

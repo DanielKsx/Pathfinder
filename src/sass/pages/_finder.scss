@@ -1,0 +1,73 @@
+.finder {
+  position: relative;
+  min-height: 100vh;
+  background: $bg-color;
+  padding-top: 50vh;
+}
+
+.finder-ui {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(560px, 92vw);
+  text-align: center;
+  z-index: 10;
+}
+
+.finder-status {
+  color: #fff;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.finder-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+  padding: 12px;
+  border: 2px solid rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.35);
+}
+
+.finder-cell {
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+}
+
+.finder-cell:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.finder-actions {
+  margin-top: 28px;
+}
+
+.finder-action {
+  padding: 12px 32px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: #d35400;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.finder-cell--selected {
+  background: $grid-selected; 
+}
+
+.finder-cell--start {
+  background: $grid-path;
+}
+
+.finder-cell--end {
+  background: $color-accent;
+}
+
+.finder-cell--path {
+  background: #3498db;
+}
