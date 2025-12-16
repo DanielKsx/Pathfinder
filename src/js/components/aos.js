@@ -1,3 +1,5 @@
+/* global AOS */
+
 export function initAOS() {
   AOS.init({
     duration: 700,

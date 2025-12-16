@@ -149,13 +149,12 @@
   }
 
   .card-title {
-  white-space: nowrap;
-}
+    white-space: nowrap;
+  }
  
 }
 
 @media (max-width: $bp-desktop) {
-
   .main-nav {
     gap: 32px;
     margin-top: 32px;
@@ -190,13 +189,13 @@
     margin-top: 120px;
     justify-items: center;
 
-  .hero-subtitle {
-    justify-self: center;
-    margin-top: 10px;
-    margin-right: 0;
-    color: rgba(204, 202, 202, 1);
+    .hero-subtitle {
+      justify-self: center;
+      margin-top: 10px;
+      margin-right: 0;
+      color: rgba(204, 202, 202, 1);
+    }
   }
-}
 
   .section-top {
     margin-top: -12vh;
@@ -235,7 +234,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
   .card-bottom .card-body--over-image {
     position: static;
