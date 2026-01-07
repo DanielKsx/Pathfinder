@@ -33,7 +33,7 @@
 /* nav */ 
 
 .main-nav {
-  position: static;
+  position: relative;
   margin-top: 50px;
   display: flex;
   justify-content: center;
@@ -82,7 +82,7 @@
 /* sections */
 .section-top {
   position: relative;
-  margin-top: -30vh;
+  margin-top: -12vh;
   padding-left: $page-padding-x;
   padding-right: $page-padding-x;
 }

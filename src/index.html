@@ -26,8 +26,8 @@
 
     <main>
         <section class="section section-top">
-            <article class="card card-top" data-aos="fade-up">
-                <figure class="card-media" data-aos="fade-right" data-aos-delay="100">
+            <article class="card card-top">
+                <figure class="card-media" data-aos="zoom-in-left" data-aos-delay="100">
                     <img src="./images/1.jpg" alt="travellers">
                 </figure>
 
@@ -39,8 +39,8 @@
         </section>
 
         <section class="section section-bottom">
-            <article class="card card-bottom" data-aos="fade-up">
-                <figure class="card-minimalize" data-aos="fade-left" data-aos-delay="100">
+            <article class="card card-bottom">
+                <figure class="card-minimalize" data-aos="zoom-in-right" data-aos-delay="100">
                     <img src="./images/2.jpg" alt="road">
                 </figure>
                     <div class="card-body card-body--over-image" data-aos="fade-right" data-aos-delay="200">
@@ -73,8 +73,8 @@
 
     <main class="finder">
         <div class="finder-ui">
-            <section class="section finder-header">
-                <h2 class="finder-status"></h2>
+            <section class="section finder-header" id="finder-header">
+
             </section>
 
             <section class="section finder-map">
@@ -82,7 +82,7 @@
             </section>
 
             <section class="section finder-actions">
-                <button class="btn finder-action"></button>
+                <button class="btn finder-action" type="button"></button>
             </section>
         </div>
     </main>
@@ -90,9 +90,27 @@
     <footer class="page-footer">
         All rights reserved
     </footer>
-    
+
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
+<script id="template-finder-status" type="text/x-handlebars-template">
+  <h2 class="finder-status">{{text}}</h2>
+</script>
+<div class="overlay is-hidden" id="route-summary">
+  <div class="overlay-box">
+    <button class="overlay-close" type="button" aria-label="Close">×</button>
+    <div class="overlay-body" id="route-summary-body"></div>
+  </div>
+</div>
+<script id="template-route-summary" type="text/x-handlebars-template">
+  <h3 class="overlay-title">Route statistics</h3>
+  <div class="overlay-stats">
+    <p><strong>Total selected:</strong> {{all}}</p>
+    <p><strong>Shortest route:</strong> {{min}}</p>
+    <p><strong>Longest route:</strong> {{max}}</p>
+  </div>
+</script>
 <script type="module" src="./js/app.js"></script>
 </body>
 </html>
