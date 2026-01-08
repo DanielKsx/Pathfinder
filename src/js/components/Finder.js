@@ -29,13 +29,13 @@ class Finder {
 
     const statusTpl = document.querySelector('#template-finder-status');
     this.templates.status = statusTpl
-    ? Handlebars.compile(statusTpl.innerHTML)
-    : null;
+      ? Handlebars.compile(statusTpl.innerHTML)
+      : null;
 
     const summaryTpl = document.querySelector(select.summary.template);
     this.templates.summary = summaryTpl
-    ? Handlebars.compile(summaryTpl.innerHTML)
-    : null;
+      ? Handlebars.compile(summaryTpl.innerHTML)
+      : null;
   }
 
   init() {
@@ -87,8 +87,8 @@ class Finder {
     setTimeout(() => {
       if (statusEl) statusEl.style.color = '';
       this.renderStatus('Draw routes');
-      }, 1500);
-    }
+    }, 1500);
+  }
 
 
   clearHints() {
@@ -412,8 +412,8 @@ class Finder {
       }
     }
 
-  return dist;
-}
+    return dist;
+  }
 
   bindSummary() {
     if (!this.dom.summary || !this.dom.summaryClose) return;
